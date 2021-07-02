@@ -1,13 +1,9 @@
-from songs_parser import parse, write_to_txt
+from songs_parser import Parser
 
 
 def main() -> None:
     try:
-        url = input('Введите url сайта: ')
-
-        parse(url)
-
-        main()
+        Parser('https://www.amalgama-lab.com/songs/t/twenty_one_pilots/nico_and_the_niners.html', True)
     except KeyboardInterrupt:
         print('вы успешно вышли из программы')
 
